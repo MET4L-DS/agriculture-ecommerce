@@ -21,12 +21,12 @@ export const navLinks = [
 export const products = [
     {
         id: 1,
-        name: "Apple",
+        name: "lorem ipsum",
         price: 100,
         discount: 20,
         rating: 5,
         amount: 1,
-        company: "Apple",
+        company: "Dolor.inc",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
         image: Herbicide,
@@ -35,12 +35,12 @@ export const products = [
     },
     {
         id: 2,
-        name: "Banana",
+        name: "lorem ipsum",
         price: 200,
         discount: 10,
         rating: 4,
         amount: 1,
-        company: "Apple",
+        company: "Dolor.inc",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
         image: Herbicide_2,
@@ -49,11 +49,11 @@ export const products = [
     },
     {
         id: 3,
-        name: "Orange",
+        name: "lorem ipsum",
         price: 300,
         rating: 5,
         amount: 1,
-        company: "Apple",
+        company: "Dolor.inc",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
         image: Herbicide,
@@ -62,11 +62,11 @@ export const products = [
     },
     {
         id: 4,
-        name: "Mango",
+        name: "lorem ipsum",
         price: 400,
         rating: 5,
         amount: 1,
-        company: "Apple",
+        company: "Dolor.inc",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
         image: Herbicide_2,
@@ -75,11 +75,11 @@ export const products = [
     },
     {
         id: 5,
-        name: "Grapes",
+        name: "lorem ipsum",
         price: 500,
         rating: 5,
         amount: 1,
-        company: "Apple",
+        company: "Dolor.inc",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
         image: Herbicide,
@@ -88,12 +88,12 @@ export const products = [
     },
     {
         id: 6,
-        name: "Watermelon",
+        name: "lorem ipsum",
         price: 600,
         discount: 15,
         rating: 3,
         amount: 1,
-        company: "Apple",
+        company: "Dolor.inc",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
         image: Herbicide_2,
@@ -102,11 +102,11 @@ export const products = [
     },
     {
         id: 7,
-        name: "Pineapple",
+        name: "lorem ipsum",
         price: 700,
         rating: 5,
         amount: 1,
-        company: "Apple",
+        company: "Dolor.inc",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
         image: Herbicide,
@@ -115,11 +115,11 @@ export const products = [
     },
     {
         id: 8,
-        name: "Strawberry",
+        name: "lorem ipsum",
         price: 800,
         rating: 5,
         amount: 1,
-        company: "Apple",
+        company: "Dolor.inc",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
         image: Herbicide_2,
