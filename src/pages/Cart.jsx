@@ -7,6 +7,8 @@ import {
     incrementProductAmount,
     decrementProductAmount,
 } from "../features/cart/cartSlice";
+import { Button } from "../components";
+import { FaChevronUp, FaChevronDown } from "react-icons/fa6";
 
 const Cart = () => {
     const { cartItems, total } = useSelector((state) => state.cart);
@@ -17,19 +19,26 @@ const Cart = () => {
     }, [cartItems]);
 
     return (
-        <div className="col-[2/-2] grid gap-2">
+        <div className="col-[1/-1] grid gap-2 px-6 sm:col-[2/-2] sm:px-0">
             <hr />
             {cartItems.map((product) => (
                 <div
                     key={product.id}
-                    className="flex justify-between bg-slate-200 p-4"
+                    className="flex items-center justify-between rounded p-4"
                 >
-                    <span>{product.name}</span>
-                    <span>Quantity: {product.amount}</span>
-                    <div className="flex flex-col gap-2">
-                        <button
-                            type="button"
-                            className=" bg-gray-500"
+                    <div className="flex items-center gap-4">
+                        <img
+                            src={product.image}
+                            className=" aspect-square w-20 rounded bg-slate-100"
+                            alt=""
+                        />
+                        <p className="text-2xl text-gray-400">{product.name}</p>
+                    </div>
+
+                    <div className="flex flex-col items-center gap-2">
+                        <Button
+                            icon={FaChevronUp}
+                            padding="0rem"
                             onClick={() =>
                                 dispatch(
                                     incrementProductAmount({
@@ -37,12 +46,11 @@ const Cart = () => {
                                     }),
                                 )
                             }
-                        >
-                            Increase
-                        </button>
-                        <button
-                            type="button"
-                            className=" bg-gray-500"
+                        />
+                        <span className=" font-bold">{product.amount}</span>
+                        <Button
+                            icon={FaChevronDown}
+                            padding="0rem"
                             onClick={() => {
                                 if (product.amount === 1) {
                                     dispatch(
@@ -58,25 +66,34 @@ const Cart = () => {
                                     }),
                                 );
                             }}
-                        >
-                            Decrease
-                        </button>
+                        />
                     </div>
-                    <span>${product.price}</span>
+                    <div className="flex flex-col-reverse items-center gap-2 text-2xl font-bold">
+                        <p className="leading-none">${product.price}</p>
+                        {product.discount && (
+                            <p className="font-bold text-gray-300 line-through">
+                                $
+                                {(
+                                    product.price +
+                                    product.price * (product.discount / 100)
+                                ).toFixed(2)}
+                            </p>
+                        )}
+                    </div>
                 </div>
             ))}
             <hr />
-            <div className="flex justify-between bg-blue-200 p-4">
+            <div className="flex justify-between rounded bg-slate-100 p-4 text-2xl font-bold">
                 <span>Total</span>
                 <span>${total}</span>
             </div>
-            <button
-                type="button"
-                className="mx-auto p-4 text-red-500 outline outline-2 outline-red-500 hover:bg-red-500 hover:text-white"
-                onClick={() => dispatch(clearCart())}
-            >
-                Clear Cart
-            </button>
+            <div className="flex justify-center py-4">
+                <Button
+                    text="Clear Cart"
+                    color="red-500"
+                    onClick={() => dispatch(clearCart())}
+                />
+            </div>
         </div>
     );
 };

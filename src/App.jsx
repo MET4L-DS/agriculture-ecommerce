@@ -4,6 +4,7 @@ import {
     Products,
     SingleProduct,
     Cart,
+    Wishlist,
     SharedLayout,
     SharedProductsLayout,
 } from "./pages";
@@ -20,6 +21,7 @@ const App = () => {
                         <Route path=":id" element={<SingleProduct />} />
                     </Route>
                     <Route path="cart" element={<Cart />} />
+                    <Route path="wishlist" element={<Wishlist />} />
                 </Route>
             </Routes>
         </BrowserRouter>

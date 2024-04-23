@@ -21,6 +21,7 @@ export const products = [
         id: 1,
         name: "Apple",
         price: 100,
+        discount: 20,
         rating: 5,
         amount: 1,
         company: "Apple",
@@ -34,7 +35,8 @@ export const products = [
         id: 2,
         name: "Banana",
         price: 200,
-        rating: 5,
+        discount: 10,
+        rating: 4,
         amount: 1,
         company: "Apple",
         description:
@@ -86,7 +88,8 @@ export const products = [
         id: 6,
         name: "Watermelon",
         price: 600,
-        rating: 5,
+        discount: 15,
+        rating: 3,
         amount: 1,
         company: "Apple",
         description:
