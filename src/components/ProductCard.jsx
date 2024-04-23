@@ -1,7 +1,5 @@
 import React from "react";
-import { TbStar, TbStarFilled } from "react-icons/tb";
 import { Link } from "react-router-dom";
-// import { ColorSelector } from "./";
 import { StarRating } from "./";
 
 const ProductCard = ({ id, name, image, price, rating, discount }) => {
@@ -40,7 +38,6 @@ const ProductCard = ({ id, name, image, price, rating, discount }) => {
                         </p>
                     )}
                 </div>
-                {/* {!starRating && <ColorSelector />} */}
             </div>
         </Link>
     );

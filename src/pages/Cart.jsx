@@ -68,6 +68,14 @@ const Cart = () => {
                             }}
                         />
                     </div>
+                    <Button
+                        text="Remove"
+                        color="red-500"
+                        padding="0.5rem"
+                        onClick={() =>
+                            dispatch(removeProduct({ productID: product.id }))
+                        }
+                    />
                     <div className="flex flex-col-reverse items-center gap-2 text-2xl font-bold">
                         <p className="leading-none">${product.price}</p>
                         {product.discount && (

@@ -4,7 +4,6 @@ import { navLinks } from "../constants";
 import { FaLeaf } from "react-icons/fa6";
 import { TfiHeart, TfiSearch, TfiShoppingCart, TfiUser } from "react-icons/tfi";
 import { useSelector } from "react-redux";
-import { FaHamburger } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
@@ -39,7 +38,7 @@ const Navbar = () => {
                     <TfiSearch />
                     <Link
                         to="/wishlist"
-                        className="relative flex items-center gap-2"
+                        className="relative flex items-center gap-2 hover:text-green-500"
                     >
                         <TfiHeart />
                         <div className="absolute bottom-[60%] left-[60%] flex aspect-square items-center justify-center rounded-full bg-green-500 p-1 pb-[5px] text-[0.6rem] leading-[0] text-white outline outline-2 outline-white">
@@ -48,7 +47,7 @@ const Navbar = () => {
                     </Link>
                     <Link
                         to="/cart"
-                        className="relative flex items-center gap-2"
+                        className="relative flex items-center gap-2 hover:text-green-500"
                     >
                         <TfiShoppingCart size={18} />
                         <div className="absolute bottom-[60%] left-[60%] flex aspect-square items-center justify-center rounded-full bg-green-500 p-1 pb-[5px] text-[0.6rem] leading-[0] text-white outline outline-2 outline-white">
@@ -62,7 +61,6 @@ const Navbar = () => {
                         className={` transition-transform duration-300 ${isMenuOpen && " rotate-180"}`}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     />
-                    {/* {isMenuOpen && ( */}
                     <div
                         className={`absolute right-0 top-full z-50 grid ${isMenuOpen && "translate-y-[-200%] opacity-0"} gap-8 rounded bg-slate-100 p-4 transition-all duration-300 `}
                     >
@@ -83,7 +81,7 @@ const Navbar = () => {
                             <TfiSearch />
                             <Link
                                 to="/wishlist"
-                                className="relative flex items-center gap-2"
+                                className="relative flex items-center gap-2 hover:text-green-500"
                             >
                                 <TfiHeart />
                                 <div className="absolute bottom-[60%] left-[60%] flex aspect-square items-center justify-center rounded-full bg-green-500 p-1 pb-[5px] text-[0.6rem] leading-[0] text-white outline outline-2 outline-white">
@@ -92,7 +90,7 @@ const Navbar = () => {
                             </Link>
                             <Link
                                 to="/cart"
-                                className="relative flex items-center gap-2"
+                                className="relative flex items-center gap-2 hover:text-green-500"
                             >
                                 <TfiShoppingCart size={18} />
                                 <div className="absolute bottom-[60%] left-[60%] flex aspect-square items-center justify-center rounded-full bg-green-500 p-1 pb-[5px] text-[0.6rem] leading-[0] text-white outline outline-2 outline-white">
@@ -102,7 +100,6 @@ const Navbar = () => {
                             <TfiUser />
                         </div>
                     </div>
-                    {/* )} */}
                 </div>
             </div>
         </div>
