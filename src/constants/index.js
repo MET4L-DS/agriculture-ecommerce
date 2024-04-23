@@ -1,3 +1,5 @@
+import { Herbicide, Herbicide_2 } from "../assets/images";
+
 export const navLinks = [
     {
         id: "home",
@@ -27,7 +29,7 @@ export const products = [
         company: "Apple",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
-        image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        image: Herbicide,
         addedToCart: false,
         wishlisted: false,
     },
@@ -41,7 +43,7 @@ export const products = [
         company: "Apple",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
-        image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        image: Herbicide_2,
         addedToCart: false,
         wishlisted: false,
     },
@@ -54,7 +56,7 @@ export const products = [
         company: "Apple",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
-        image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        image: Herbicide,
         addedToCart: false,
         wishlisted: false,
     },
@@ -67,7 +69,7 @@ export const products = [
         company: "Apple",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
-        image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        image: Herbicide_2,
         addedToCart: false,
         wishlisted: false,
     },
@@ -80,7 +82,7 @@ export const products = [
         company: "Apple",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
-        image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        image: Herbicide,
         addedToCart: false,
         wishlisted: false,
     },
@@ -94,7 +96,7 @@ export const products = [
         company: "Apple",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
-        image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        image: Herbicide_2,
         addedToCart: false,
         wishlisted: false,
     },
@@ -107,7 +109,7 @@ export const products = [
         company: "Apple",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
-        image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        image: Herbicide,
         addedToCart: false,
         wishlisted: false,
     },
@@ -120,7 +122,7 @@ export const products = [
         company: "Apple",
         description:
             "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores sit ut dolorum. Labore, consequatur qui rem nostrum ratione, accusamus suscipit recusandae voluptatem est voluptate cupiditate atque voluptatum. Delectus, eius voluptas.",
-        image: "https://images.unsplash.com/photo-1597645587822-e99fa5d45d25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        image: Herbicide_2,
         addedToCart: false,
         wishlisted: false,
     },
