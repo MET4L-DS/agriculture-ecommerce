@@ -2,28 +2,66 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
     clearCart,
+    removeProduct,
     calculateTotal,
-    calculateAmount,
+    incrementProductAmount,
+    decrementProductAmount,
 } from "../features/cart/cartSlice";
 
 const Cart = () => {
-    const { products, total } = useSelector((state) => state.cart);
+    const { cartItems, total } = useSelector((state) => state.cart);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(calculateTotal());
-        dispatch(calculateAmount());
-    }, [products]);
+    }, [cartItems]);
 
     return (
         <div className="col-[2/-2] grid gap-2">
             <hr />
-            {products.map((product) => (
+            {cartItems.map((product) => (
                 <div
                     key={product.id}
                     className="flex justify-between bg-slate-200 p-4"
                 >
                     <span>{product.name}</span>
+                    <span>Quantity: {product.amount}</span>
+                    <div className="flex flex-col gap-2">
+                        <button
+                            type="button"
+                            className=" bg-gray-500"
+                            onClick={() =>
+                                dispatch(
+                                    incrementProductAmount({
+                                        productID: product.id,
+                                    }),
+                                )
+                            }
+                        >
+                            Increase
+                        </button>
+                        <button
+                            type="button"
+                            className=" bg-gray-500"
+                            onClick={() => {
+                                if (product.amount === 1) {
+                                    dispatch(
+                                        removeProduct({
+                                            productID: product.id,
+                                        }),
+                                    );
+                                    return;
+                                }
+                                dispatch(
+                                    decrementProductAmount({
+                                        productID: product.id,
+                                    }),
+                                );
+                            }}
+                        >
+                            Decrease
+                        </button>
+                    </div>
                     <span>${product.price}</span>
                 </div>
             ))}
@@ -34,7 +72,7 @@ const Cart = () => {
             </div>
             <button
                 type="button"
-                className="mx-auto p-4 text-red-500 outline outline-2 outline-red-500"
+                className="mx-auto p-4 text-red-500 outline outline-2 outline-red-500 hover:bg-red-500 hover:text-white"
                 onClick={() => dispatch(clearCart())}
             >
                 Clear Cart

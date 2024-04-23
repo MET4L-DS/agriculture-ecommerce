@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { products } from "../../constants";
 
 const initialState = {
-    products: products,
+    cartItems: [],
     amount: 0,
     total: 0,
 };
@@ -12,26 +11,51 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         addProduct: (state, action) => {
-            state.products.push(action.payload);
+            state.cartItems.push(action.payload);
             state.amount += 1;
         },
+        removeProduct: (state, action) => {
+            state.cartItems = state.cartItems.filter(
+                (item) => item.id !== action.payload.productID,
+            );
+            state.amount -= 1;
+        },
         clearCart: (state) => {
-            state.products = [];
+            state.cartItems = [];
             state.amount = 0;
             state.total = 0;
         },
-        calculateTotal: (state) => {
-            state.total = state.products.reduce(
-                (total, product) => total + product.price,
-                0,
+        incrementProductAmount: (state, { payload }) => {
+            const cartItem = state.cartItems.find(
+                (item) => item.id === payload.productID,
             );
+            cartItem.amount += 1;
         },
-        calculateAmount: (state) => {
-            state.amount = state.products.length;
+        decrementProductAmount: (state, { payload }) => {
+            const cartItem = state.cartItems.find(
+                (item) => item.id === payload.productID,
+            );
+            cartItem.amount = cartItem.amount - 1;
+        },
+        calculateTotal: (state) => {
+            let amount = 0;
+            let total = 0;
+            state.cartItems.forEach((item) => {
+                amount += item.amount;
+                total += item.amount * item.price;
+            });
+            state.amount = amount;
+            state.total = total;
         },
     },
 });
 
-export const { addProduct, clearCart, calculateTotal, calculateAmount } =
-    cartSlice.actions;
+export const {
+    addProduct,
+    removeProduct,
+    clearCart,
+    incrementProductAmount,
+    decrementProductAmount,
+    calculateTotal,
+} = cartSlice.actions;
 export default cartSlice.reducer;

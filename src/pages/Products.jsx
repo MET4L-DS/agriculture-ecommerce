@@ -1,7 +1,6 @@
-import React from "react";
 import { ProductsContainer } from "../components";
 
-const Home = () => {
+const Products = () => {
     return (
         <div className="col-[2/-2] grid grid-cols-subgrid">
             <ProductsContainer />
@@ -9,4 +8,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Products;
