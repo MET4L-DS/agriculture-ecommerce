@@ -26,7 +26,7 @@ const Cart = () => {
                     key={product.id}
                     className="flex flex-col items-center justify-between gap-4 rounded p-4 sm:flex-row"
                 >
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 rounded bg-slate-100 p-2 sm:bg-transparent sm:p-0">
                         <img
                             src={product.image}
                             className=" aspect-square w-20 rounded bg-slate-100"
