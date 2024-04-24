@@ -24,7 +24,7 @@ const Cart = () => {
             {cartItems.map((product) => (
                 <div
                     key={product.id}
-                    className="flex items-center justify-between rounded p-4"
+                    className="flex flex-col items-center justify-between gap-4 rounded p-4 sm:flex-row"
                 >
                     <div className="flex items-center gap-4">
                         <img
@@ -35,48 +35,52 @@ const Cart = () => {
                         <p className="text-2xl text-gray-400">{product.name}</p>
                     </div>
 
-                    <div className="flex flex-col items-center gap-2">
-                        <Button
-                            icon={FaChevronUp}
-                            padding="0rem"
-                            onClick={() =>
-                                dispatch(
-                                    incrementProductAmount({
-                                        productID: product.id,
-                                    }),
-                                )
-                            }
-                        />
-                        <span className=" font-bold">{product.amount}</span>
-                        <Button
-                            icon={FaChevronDown}
-                            padding="0rem"
-                            onClick={() => {
-                                if (product.amount === 1) {
+                    <div className="flex items-center gap-8">
+                        <div className="flex flex-col items-center gap-2">
+                            <Button
+                                icon={FaChevronUp}
+                                padding="0rem"
+                                onClick={() =>
                                     dispatch(
-                                        removeProduct({
+                                        incrementProductAmount({
+                                            productID: product.id,
+                                        }),
+                                    )
+                                }
+                            />
+                            <span className=" font-bold">{product.amount}</span>
+                            <Button
+                                icon={FaChevronDown}
+                                padding="0rem"
+                                onClick={() => {
+                                    if (product.amount === 1) {
+                                        dispatch(
+                                            removeProduct({
+                                                productID: product.id,
+                                            }),
+                                        );
+                                        return;
+                                    }
+                                    dispatch(
+                                        decrementProductAmount({
                                             productID: product.id,
                                         }),
                                     );
-                                    return;
-                                }
+                                }}
+                            />
+                        </div>
+                        <Button
+                            text="Remove"
+                            color="red-500"
+                            padding="0.5rem"
+                            onClick={() =>
                                 dispatch(
-                                    decrementProductAmount({
-                                        productID: product.id,
-                                    }),
-                                );
-                            }}
+                                    removeProduct({ productID: product.id }),
+                                )
+                            }
                         />
                     </div>
-                    <Button
-                        text="Remove"
-                        color="red-500"
-                        padding="0.5rem"
-                        onClick={() =>
-                            dispatch(removeProduct({ productID: product.id }))
-                        }
-                    />
-                    <div className="flex flex-col-reverse items-center gap-2 text-2xl font-bold">
+                    <div className="flex items-center gap-2 text-2xl font-bold sm:flex-col-reverse">
                         <p className="leading-none">${product.price}</p>
                         {product.discount && (
                             <p className="font-bold text-gray-300 line-through">
